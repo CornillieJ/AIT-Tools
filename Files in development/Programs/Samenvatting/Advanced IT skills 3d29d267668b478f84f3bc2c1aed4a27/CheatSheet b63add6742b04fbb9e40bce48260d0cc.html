@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>CheatSheet</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b63add67-42b0-4fbb-9e40-bce48260d0cc" class="page sans"><header><h1 class="page-title">CheatSheet</h1><p class="page-description"></p></header><div class="page-body"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">IP-addressen</summary><div class="indented"><p id="70bbca16-7cec-4183-8084-2a0ece2a1e02" class="">Private <span style="border-bottom:0.05em solid">adressen</span><div class="indented"><ul id="be783b9d-1b7b-4c81-b59b-204cf5d2d90f" class="bulleted-list"><li style="list-style-type:disc">10.0.0.1                             -                            10.255.255.254</li></ul><ul id="3e819670-d294-49e7-81f2-1fd8c5b7d9cb" class="bulleted-list"><li style="list-style-type:disc">172.16.0.1                         -                            172.31.255.254</li></ul><ul id="65e9b0b1-0e83-4674-b8d7-92c12d767e9e" class="bulleted-list"><li style="list-style-type:disc">192.168.0.1                       -                            192.168.255.254</li></ul></div></p><p id="5608ee8e-3004-43e0-b7dd-c271f8d60f9b" class="">Shared address space    <div class="indented"><ul id="6080366b-4bae-4b5d-98df-563105dba2a1" class="bulleted-list"><li style="list-style-type:disc">100.64.0.1                         -                            100.127.255.254</li></ul></div></p><p id="2d576d67-fecb-43d1-af9b-600d5ae9e845" class="">Loopback<div class="indented"><ul id="7896927d-b8fa-40fc-9b9e-20b8bb8802e9" class="bulleted-list"><li style="list-style-type:disc">127.0.0.1                           -                            127.255.255.254</li></ul></div></p><p id="b40af863-eeae-43a2-aacf-3f5a187e42fc" class="">Link<span style="border-bottom:0.05em solid"> local</span><div class="indented"><ul id="a382e258-64d0-48ee-ac9b-db23afc789cc" class="bulleted-list"><li style="list-style-type:disc">169.254.0.1                       -                            169.254.255.254</li></ul></div></p><p id="41debec9-44dd-4938-8985-d145070cd912" class="">Experimental<div class="indented"><ul id="10faebdd-b518-4fa6-8761-e103ccd257b6" class="bulleted-list"><li style="list-style-type:disc">240.0.0.1                           -                            255.255.255.254</li></ul></div></p><p id="b9e29ab4-869b-43fe-a2e4-c18997f09c78" class="">Test-net<div class="indented"><ul id="8774b63e-7f0d-4553-8573-0d568759c4ee" class="bulleted-list"><li style="list-style-type:disc">192.0.2.0                           -                            192.0.2.255</li></ul></div></p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">IP-Addressen Classfull</summary><div class="indented"><p id="4f0de4bb-8176-4b7c-8c7a-a5320af42940" class="">Klasse 			eerste bit(s)				eerst byte<br/>A			                0 					    0 – 127<br/>B			               10					127 – 191<br/>C			              110					192 – 223<br/>D			             1110					224 – 239<br/>E			             1111					240 – 255<br/></p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">SubnetMaskers</summary><div class="indented"><p id="fb8ada88-7df0-405f-805f-7e1a9a4769a0" class=""><span style="border-bottom:0.05em solid">Subnetmaskers </span>mogelijke Byte waarden:</p><p id="b3b1f67c-4eeb-424e-9715-91e4be529a6d" class="">1111 1111                                                      255</p><p id="1b549d84-2425-4d98-9f6d-f98c8a077df8" class="">1111 1110                                                      254</p><p id="aa961871-4a62-488d-b776-b6d1b832ef85" class="">1111 1100                                                      252</p><p id="9a1b83cb-3a43-40c8-829a-d7b3ca6ebdcb" class="">1111 1000                                                      248</p><p id="43335a1a-f517-470d-8722-d0ffcac7422e" class="">1111 0000                                                      240</p><p id="72a8c90b-26c2-4eb0-adf8-580d33efa2c5" class="">1110 0000                                                      224</p><p id="8cc4a1f5-0158-471e-abfb-05a5da7791dc" class="">1100 0000                                                      192</p><p id="b1f4a6f7-6f72-4c38-92d8-f602fc69f86e" class="">1000 0000                                                      128</p><p id="2a285f98-14b6-4079-9c14-2eed7255d941" class="">0000 0000                                                      0</p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">CIDR ranges</summary><div class="indented"><p id="a5ba02f0-60a7-4f41-80c4-dbca35ea02bd" class="">CIDR range	 <div class="indented"><ul id="8bc2c903-422b-46bd-b76d-2d7e4f01a6c3" class="bulleted-list"><li style="list-style-type:disc">10.X.X.X			                                             /8 tot /30</li></ul><ul id="cd301d98-01b8-4dde-bf2c-a8dc7524e75d" class="bulleted-list"><li style="list-style-type:disc">172.16.X.X – 172.31.X.X	                                   /12 tot /30</li></ul><ul id="36853686-e59e-4efb-aca3-de6f210f8f7a" class="bulleted-list"><li style="list-style-type:disc">192.168.X.X			                                   /16 tot /30</li></ul></div></p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Beschikbare Hosts</summary><div class="indented"><p id="38a6c145-14cb-4abf-adb4-13042b5f3175" class="">Beschikbare<span style="border-bottom:0.05em solid"> hosts</span> berekenen</p><p id="b7ff818a-e121-4848-9300-302d20ec3655" class="">/8                                        256*256*256 – 2    of 2(32-8) – 2  = 16.777.214</p><p id="0b811b0d-3b7f-4d4e-9d43-9f36d5f33999" class="">/9                                        256*256*128 – 2    of 2(32-9) – 2  = 8.388.606</p><p id="5a0f38a1-2978-47bf-911a-400b78457de2" class="">/10                                      256*256*64 – 2      of 2(32-10) – 2  = 4.194.302</p><p id="0267990c-7946-4bdc-aa71-a8d3e635319f" class="">…</p><p id="9291d567-e8df-47db-b330-727cec375ff9" class="">/15                                      256*256*2 – 2        of 2(32-15) – 2  = 131.070</p><p id="457c0358-f91a-4027-a897-b59e17eebc12" class="">/16                                      256*256 – 2             of 2(32-16) – 2  = 65.534</p><p id="959f09e1-e0a5-470f-9a92-53bc285be7b0" class="">…</p><p id="52a2b767-bd22-4290-bdc4-3f6256febc9d" class="">/30                                      4 – 2                           of 2(32-30) – 2  = 2</p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Machten van 2</summary><div class="indented"><table id="23fabf63-bbdb-4eec-815d-b602b8982ff1" class="simple-table"><tbody><tr id="69a4de7c-65d4-417b-b7f4-aab47dd42cbb"><td id="muN[" class="">Grondtal</td><td id="YyH|" class="">Macht</td><td id="`pzl" class="" style="width:120px">Resultaat</td></tr><tr id="849b7e08-a08e-4371-99ba-b1da7ff0307b"><td id="muN[" class="">2</td><td id="YyH|" class="">2</td><td id="`pzl" class="" style="width:120px">4</td></tr><tr id="b7b7f412-49ce-4da5-b176-926abd409389"><td id="muN[" class="">2</td><td id="YyH|" class="">3</td><td id="`pzl" class="" style="width:120px">8</td></tr><tr id="5ee860bf-02b9-4974-b23c-f1dabef70068"><td id="muN[" class="">2</td><td id="YyH|" class="">4</td><td id="`pzl" class="" style="width:120px">16</td></tr><tr id="7bc84e24-ce03-4847-9087-09c1f4bd485a"><td id="muN[" class="">2</td><td id="YyH|" class="">5</td><td id="`pzl" class="" style="width:120px">32</td></tr><tr id="10df509f-557b-4dc4-b0b2-56d7a368a323"><td id="muN[" class="">2</td><td id="YyH|" class="">6</td><td id="`pzl" class="" style="width:120px">64</td></tr><tr id="6765e99a-269b-4d4d-98d6-a611bb43d324"><td id="muN[" class="">2</td><td id="YyH|" class="">7</td><td id="`pzl" class="" style="width:120px">128</td></tr><tr id="7c991131-abd6-4979-8d64-d40bbf211b3c"><td id="muN[" class="">2</td><td id="YyH|" class="">8</td><td id="`pzl" class="" style="width:120px">256</td></tr><tr id="809f02c5-3b56-4b50-bd9a-7bf4b71232ea"><td id="muN[" class="">2</td><td id="YyH|" class="">9</td><td id="`pzl" class="" style="width:120px">512</td></tr><tr id="05dcdd1e-9291-4dad-a0a7-34e93b4dc87b"><td id="muN[" class="">2</td><td id="YyH|" class="">10</td><td id="`pzl" class="" style="width:120px">1024</td></tr><tr id="e9aa7480-40b3-47f4-aefe-5b5658d54fe8"><td id="muN[" class="">2</td><td id="YyH|" class="">11</td><td id="`pzl" class="" style="width:120px">2048</td></tr><tr id="8fb7c459-be3d-4f34-b7fe-c6b384011fa5"><td id="muN[" class="">2</td><td id="YyH|" class="">12</td><td id="`pzl" class="" style="width:120px">4096</td></tr><tr id="b4cd6bf5-216e-42b9-8928-6d6c3028b7b0"><td id="muN[" class="">2</td><td id="YyH|" class="">13</td><td id="`pzl" class="" style="width:120px">8192</td></tr><tr id="3c1bf27a-46e6-4dd8-9b9a-476e81ae7473"><td id="muN[" class="">2</td><td id="YyH|" class="">14</td><td id="`pzl" class="" style="width:120px">16384</td></tr><tr id="330e25be-cd43-4194-81ad-d28b7d3d3939"><td id="muN[" class="">2</td><td id="YyH|" class="">15</td><td id="`pzl" class="" style="width:120px">32768</td></tr><tr id="fb8cf3b1-b5be-43f5-b46c-da4639231497"><td id="muN[" class="">2</td><td id="YyH|" class="">16</td><td id="`pzl" class="" style="width:120px">65536</td></tr><tr id="3d2dff02-5e51-408a-8a83-5ca032a926d1"><td id="muN[" class="">2</td><td id="YyH|" class="">17</td><td id="`pzl" class="" style="width:120px">131072</td></tr><tr id="a7b494a8-4808-4702-b752-6b0cff31e00f"><td id="muN[" class="">2</td><td id="YyH|" class="">18</td><td id="`pzl" class="" style="width:120px">262144</td></tr><tr id="446c26ca-9e08-4433-a165-1e40517dad5f"><td id="muN[" class="">2</td><td id="YyH|" class="">19</td><td id="`pzl" class="" style="width:120px">524288</td></tr><tr id="faf05b86-1d24-4d93-8770-057ab6858100"><td id="muN[" class="">2</td><td id="YyH|" class="">20</td><td id="`pzl" class="" style="width:120px">1048576</td></tr><tr id="d0479636-029b-433d-895d-93642dfec2be"><td id="muN[" class="">2</td><td id="YyH|" class="">21</td><td id="`pzl" class="" style="width:120px">2097152</td></tr><tr id="9634e9f8-d560-4b0f-a165-0b889a994787"><td id="muN[" class="">2</td><td id="YyH|" class="">22</td><td id="`pzl" class="" style="width:120px">4194304</td></tr><tr id="15a501e9-fc7b-4098-aed2-88185b7185ad"><td id="muN[" class="">2</td><td id="YyH|" class="">23</td><td id="`pzl" class="" style="width:120px">8388608</td></tr><tr id="894810ab-bd8d-47fa-8f09-dbc73c66a8e2"><td id="muN[" class="">2</td><td id="YyH|" class="">24</td><td id="`pzl" class="" style="width:120px">16777216</td></tr></tbody></table><p id="e9c6db94-66e8-4521-989f-61c3e7bfda61" class="">
+</p></div></details><figure id="87978d92-218b-40dd-8301-a33bb3b7df5f"><div class="source"><a href="CheatSheet%20b63add6742b04fbb9e40bce48260d0cc/cheatSheet.docx">cheatSheet.docx</a></div></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

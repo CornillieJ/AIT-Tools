@@ -1,0 +1,28 @@
+﻿<Window x:Class="IpCalculator.Wpf.StartupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:IpCalculator.Wpf"
+        mc:Ignorable="d"
+        Title="StartupWindow" Height="300" Width="300" WindowStartupLocation="Manual" Left="0" Top="0">
+    <Grid>
+        <StackPanel Width="250">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="0,10,0,0"/>
+                </Style>
+            </StackPanel.Resources> 
+            <Button x:Name="btnIPv4Calc" Content="IPv4 calculator" Click="BtnIPv4Calc_OnClick" Background="Coral"/>
+            <Button x:Name="btnIPv4Manual" Content="IPv4 manual calculator" Click="BtnIPv4Manual_OnClick" Background="LightCoral"
+                    Width="125" HorizontalAlignment="Right" Margin="0,1,0,0"/>
+            <Button x:Name="btnIPv6Calc" Content="IPv6 calculator" Click="BtnIPv6Calc_OnClick" Background="Coral"/>
+            <Button x:Name="btnSummary" Content="Open AIT Samenvatting" Background="Coral" Click="BtnSummary_OnClick"/>
+            <Button x:Name="btnMyNics" Content="My Network devices tool" Background="Coral" Click="BtnMyNics_OnClick"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnNatBig" Width="120" Content="NAT tool normal" Background="Coral" Click="BtnNat_OnClick"/>
+                <Button x:Name="btnNatSmall" Width="120" Content="NAT tool small" Margin="10,10,0,0" Background="Coral" Click="BtnNat_OnClick"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
