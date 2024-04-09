@@ -1,6 +1,6 @@
 # ULTIMATE AIT TOOLS
 
-Ultimate AIT Tools is a comprehensive WPF program designed to assist with various networking tasks. It includes several tools to simplify IP address calculations, IPv6 manipulation, and access to educational materials related to AIT (Applied Information Technology) studies.
+Ultimate AIT Tools is a comprehensive WPF program designed to assist with various networking tasks. It includes several tools to simplify IP address calculations, IPv6 manipulation, and access to educational materials related to AIT (Advanced IT Skills).
 
 ## Features
 
