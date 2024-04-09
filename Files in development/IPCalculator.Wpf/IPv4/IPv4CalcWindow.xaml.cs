@@ -246,16 +246,20 @@ namespace IpCalculator.Wpf.IPv4
             switch (hostColor)
             {
                 case HostColors.White:
-                    uri = new Uri(directoryInfo.FullName + "/Images/white.png");
+                    // uri = new Uri(directoryInfo.FullName + "/Images/white.png");
+                    uri = new Uri("/Images/white.png",UriKind.Relative);
                     break;
                 case HostColors.Red:
-                    uri = new Uri(directoryInfo.FullName + "/Images/red.png");
+                    // uri = new Uri(directoryInfo.FullName + "/Images/red.png");
+                    uri = new Uri("/Images/red.png",UriKind.Relative);
                     break;
                 case HostColors.Green:
-                    uri = new Uri(directoryInfo.FullName + "/Images/green.png");
+                    // uri = new Uri(directoryInfo.FullName + "/Images/green.png");
+                    uri = new Uri("/Images/green.png",UriKind.Relative);
                     break;
                 default:
-                    uri = new Uri(directoryInfo.FullName + "/Images/white.png");
+                    // uri = new Uri(directoryInfo.FullName + "/Images/white.png");
+                    uri = new Uri("/Images/white.png",UriKind.Relative);
                     break;
             }
             return uri;
