@@ -115,7 +115,7 @@ public static class IPv6Converter
     public static string GetSubnetId(int cidr, IEnumerable<string> firstHalf)
     {
         int amountOfRoutingSegments = cidr / 16;
-        int amountOfSubnetSegments = 4 - amountOfRoutingSegments;
+        int amountOfSubnetSegments = 4 - amountOfRoutingSegments-1;
         int amountOfLastBits = cidr % 16;
         if (amountOfLastBits == 0) return string.Join(':', firstHalf.TakeLast(amountOfSubnetSegments));
         IEnumerable<string> fullSegments = firstHalf.TakeLast(amountOfSubnetSegments);
