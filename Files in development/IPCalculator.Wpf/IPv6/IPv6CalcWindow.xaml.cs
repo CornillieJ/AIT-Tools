@@ -26,7 +26,10 @@ public partial class IPv6CalcWindow : Window
     {
         string ipv6Info = IpNetworkValidation.GetCurrentIpv6Info();
         txtShortIp.Text = ipv6Info.Split('%')[0];
-        txtCIDR.Text = ipv6Info.Split('%')[1];
+        if (ipv6Info.Split('%').Length > 1)
+        {
+            txtCIDR.Text = ipv6Info.Split('%')[1];
+        }
     }
     private void IPv6CalcWindow_OnClosing(object sender, CancelEventArgs e)
     {
