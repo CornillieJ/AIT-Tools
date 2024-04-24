@@ -1,0 +1,12 @@
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\bin\Debug\net6.0\IpCalculator.Core.deps.json
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\bin\Debug\net6.0\IpCalculator.Core.dll
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\bin\Debug\net6.0\IpCalculator.Core.pdb
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\obj\Debug\net6.0\IpCalculator.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\obj\Debug\net6.0\IpCalculator.Core.AssemblyInfoInputs.cache
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\obj\Debug\net6.0\IpCalculator.Core.AssemblyInfo.cs
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\obj\Debug\net6.0\IpCalculator.Core.csproj.CoreCompileInputs.cache
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\obj\Debug\net6.0\IpCalculator.Core.sourcelink.json
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\obj\Debug\net6.0\IpCalculator.Core.dll
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\obj\Debug\net6.0\refint\IpCalculator.Core.dll
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\obj\Debug\net6.0\IpCalculator.Core.pdb
+C:\Howest\02. Semester 2\Advanced IT-skills\IPtools fix\AIT-Tools\Files in development\IpCalculator.Core\obj\Debug\net6.0\ref\IpCalculator.Core.dll

@@ -1,0 +1,693 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Advanced IT skills</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3d29d267-668b-478f-84f3-bc2c1aed4a27" class="page sans"><header><h1 class="page-title">Advanced IT skills</h1><p class="page-description"></p></header><div class="page-body"><figure id="b63add67-42b0-4fbb-9e40-bce48260d0cc" class="link-to-page"><a href="Advanced%20IT%20skills%203d29d267668b478f84f3bc2c1aed4a27/CheatSheet%20b63add6742b04fbb9e40bce48260d0cc.html">CheatSheet</a></figure><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">2. IPV4</summary><div class="indented"><p id="86867cac-f769-453c-b802-611b2f7a2d51" class="">32 bits→ 4 bytes</p><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Examen tips:</summary><div class="indented"><p id="690f4bdb-ac3f-4112-9472-a08fc7bfaf85" class="">Willekeurig IP nummer met een subnet mask  192.168.17.1/24</p><p id="98779773-66b4-452b-9c2d-dd47deaeacb7" class=""><br/>→ Wat is het netwerknummer?  <br/></p><p id="4d1a8015-90f4-41fc-a991-d7a3a5bb5de7" class="">192.168.17.0</p><p id="72248c64-ece5-4f8f-a11b-6d6c1561c11d" class="">→ wat is het kleinste mogelijk host nummer? <div class="indented"><p id="a8745828-0d8f-4e14-9034-923eae44b35d" class="">192.168.17.1</p></div></p><p id="0f8a597e-51d5-4f02-8403-9e1598451ef4" class="">→ wat is het grootst mogelijk host nummer? <div class="indented"><p id="e02004a1-1725-4457-9b7f-452aa8210dca" class="">192.168.17.254</p></div></p><p id="c97a9430-5bd8-445e-a82b-754f2b4fc116" class="">→ Wat is het broadcast nummer (=grootst mogelijke host+1) <div class="indented"><p id="61cc12f1-99e7-44b0-8112-adcdc6a0ecb6" class="">192.168.17.255 </p></div></p><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="057748bb-1f01-48a6-8ff5-b4e500882841"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Er staan voorbeelden in de cursus</div></figure><p id="aeb17678-eb42-45a7-a8c8-0afc73f90291" class="">Binair omzetten→ vergeet niet terug naar dotted decimal<br/>PE1 tool gebruiken mag<br/></p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">IP nummers toekenning:</summary><div class="indented"><p id="fd1fc83c-3951-4fe7-94f9-170106ec20b8" class="">Publieke IP nummers→ Alle nummers die niet aan onderstaande gereserveerd worden</p><ul id="fc086dd1-9250-49c3-90ff-ebba64b78a8c" class="toggle"><li><details open=""><summary>Lokale(privaat) IP nummers</summary><p id="be8b90f9-4004-4162-939b-ed2211e0958f" class="">IP adressen die bestaan om lokaal onderscheid te maken </p><ol type="1" id="9ab90a2e-4304-46b3-b059-55142e833eb1" class="numbered-list" start="1"><li>10.x.x.x</li></ol><ol type="1" id="3eaf723c-7c2e-41ae-976d-d64f6f0eafee" class="numbered-list" start="2"><li>172.16.x.x</li></ol><ol type="1" id="445c938f-ca5a-4959-8bde-46d9d3ad28bd" class="numbered-list" start="3"><li>192.168.x.x</li></ol><p id="065dd5a6-4d34-44ad-adff-3f58296b735e" class="">Verschil tussen deze is enkel de range van hosts die kunnen gebruikt worden.</p></details></li></ul><ul id="ff860806-d649-4a43-88a7-768789bad445" class="toggle"><li><details open=""><summary>Loopback→127.x.x.x = localhost</summary><p id="44693aa7-9d79-4d4a-bb0b-ec8094934baa" class="">Pingt eigen machine, data wordt niet op netwerk verstuurd</p></details></li></ul><ul id="7af3f194-ed0c-469c-975f-5f4b2648d776" class="toggle"><li><details open=""><summary>Link-local→169.254.x.x = zeroconfig of APIPA</summary><p id="1b68e84a-ad22-4e45-b868-8589b1b9a8e5" class="">Dit betekent dat de DHCP server online is en er dus geen correct IP adres verkregen werd. De PCs sturen een broadcast naar de andere PCs op het netwerk om elk een uniek zeroconfig adres te verkrijgen.</p><p id="107a063a-79df-491f-ad42-df9e3092682b" class="">Dit wordt gedaan voor de TCP/IP stack. PC moet een IP adres hebben.</p><p id="86b3f93d-d21a-4900-bf7b-c6cca3229e43" class="">Je bent niks met dit IP adres.</p></details></li></ul><ul id="0a0bfdcc-2b4c-4d87-b3a5-403a32e4811b" class="toggle"><li><details open=""><summary>Experimentele adressen→ alles groter dan 240.0.0.1</summary><p id="ad53c3fe-666e-482d-9682-ad7d04da9ecc" class="">Dit is voor als er ooit meet ip addressen in ipv4 nodig zijn. Werd afgesproken bij aanmaak van ipv6</p></details></li></ul><ul id="b2d21b19-9a3d-4175-9ecc-f4fca61015ff" class="toggle"><li><details open=""><summary>TEST-NET→192.0.2.1→192.0.2.254</summary><p id="3d1b9bcb-a12a-45c6-8210-d91d9b0f8004" class="">250 nummers die gereserveerd worden voor educatieve doeleinden</p></details></li></ul><p id="d888afcb-c088-43ba-b8a7-34e1108560db" class="">
+</p><ul id="6b60f011-954d-4b82-9344-bb68e19f5282" class="toggle"><li><details open=""><summary>IPV4.Classfull → niet kennen</summary><p id="d370ead6-19aa-407f-a9f8-74bb1b1d2163" class="">Wordt niet meer gebruikt, IP adressen werden onderverdeeld in 4 klassen, ABCD. bedrijven konden blokken kopen van verschillende klassen van IP. (Het eerste cijfer bepaalde de klasse)</p><p id="e67e4047-1833-43d9-856b-a16080b8c716" class="">A, B en C klassen zijn unicast. D klassen zijn multicast en E zijn experimenteel<br/>Je huurde A B of C klassen. Klasse A waren grote netwerken. en steeds kleiner per categorie.<br/></p><p id="19a59711-24c9-49f1-b583-0ce69c321d9c" class="">Dit is weg gegaan omdat bedrijven klasses kochten van bv 16 miljoen IP adressen, maar er bitter weinig van gebruikten. Dus veel IP adressen waren gereserveerd maar verloren<br/>Elke klasse heeft ook zijn eigen specifieke subnet mask<br/></p></details></li></ul><ul id="a2b1b193-1899-4623-9a19-f646e358e2d6" class="toggle"><li><details open=""><summary>IPV4.ClassLess</summary><p id="29c65833-3017-4810-bd8f-1cf0f7c8fda6" class="">Dit is wat nu gebruikt wordt. IP adressen worden niet meer in klassen onderverdeeld.</p><p id="4d5c6430-2cc2-430b-b2dd-c368908d0bb0" class="">Dit wordt ook wel CIDR genoemd. </p></details></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">IPV4 = 2 adressen</summary><div class="indented"><p id="6a4e4f32-d651-428e-b1f6-a4711bef2812" class="">Enerzijds het netwerknummer anderzijds het host nummer.<br/>Rechtstreeks communiceren werkt enkel als de host nummer hetzelfde is voor beide hosts. En elk hostnummer is identiek<br/>Bij elk IP nummer hoort een subnetMASK:<br/></p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">IPV4: SUBNETMASK</summary><div class="indented"><p id="8261f0eb-929a-4be2-9362-92f88a9ec1d9" class="">subnetmask voorbeeld 255.255.255.0 de 0 toont aan welke nummers Host nummers zijn.</p><p id="95f027fd-66f8-4ad9-bb82-efb4e7246a0a" class="">een 32 bit getal dat binair start met 1waarden, gevold door 0. <br/>Vanaf er bij subnets een 0 voorkomt moet elk opeenvolgend nummer ook 0 zijn. (Dit duid op de binaire notatie)<br/></p><ul id="6606ee04-3850-439a-bc1b-14c44de122a7" class="toggle"><li><details open=""><summary>vb: IP       192.168.0.100<br/>Subnet    255.255.255.0<br/></summary><p id="21a0675b-f9e5-4057-b2d4-5b5379b89adb" class="">→ Netwerknummer is dus 192.168.0<br/>→ Hostnummer is 100<br/></p><p id="b77aeabc-1252-4ebf-98e6-3d8dea17e9e9" class="">Dus Hosts met netwerknummer 192.168.0 kunnen met elkaar communiceren in dit geval, maar als het netwerknummer niet gelijk is kan er niet rechtstreeks gecommuniceerd worden. Enkel met een router of smartswitch er tussen</p></details></li></ul><p id="8ef4966d-d25e-4435-9c22-6c7e3ee8d85f" class="">Een subnet van 255.255.255.0 heeft 254 mogelijke hosts (0 en 255 mogen niet toegekend worden). ofwel 8bits<br/>255.255.254.0 heeft 9 bits aan hosts mogelijk.<br/></p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">IPV4: CIDR</summary><div class="indented"><p id="e4410e0e-740c-4cf9-993e-6619a0757b46" class="">CIDR notatie vereenvoudigt het noteren van de IP nummers<br/>192.168.0.50/24→ betekent dat de eerste 24 bits van het subnet masker 1 zijn.<br/>Dus dit is hetzelfde als 192.168.0.50 met subnetmask 255.255.255.0<br/></p><ul id="01c8a8d6-7512-4e27-bf5f-e21c939fa6cb" class="toggle"><li><details open=""><summary>Voorbeeld:</summary><p id="56333ce2-90d4-4969-9f3e-165ef342b071" class="">CIDR notatie: 172.30.15.18/18</p><ul id="9e3f275f-66b4-4bf9-af25-6e20058b920d" class="toggle"><li><details open=""><summary>Subnetmask = 18 1-bits</summary><p id="5318b821-7338-4bcd-ac65-b586b35a609a" class=""><mark class="highlight-orange">1111 1111 1111 1111 11</mark><mark class="highlight-teal">00 0000 0000 0000<br/><br/></mark><mark class="highlight-default">255.255.192.0</mark></p></details></li></ul><ul id="77dbb6fe-ddc3-43c3-9a0c-75649e311818" class="toggle"><li><details open=""><summary>IP-adres binaire notatie</summary><p id="007f8c6e-5595-4cec-b37c-053b7f1fc4a1" class=""><mark class="highlight-orange">1010 1100 0001 1110 00</mark><mark class="highlight-teal">00 1111 0001 0010</mark></p></details></li></ul><ul id="7b8de218-e2b8-4554-a5a2-c3258e6b60a4" class="toggle"><li><details open=""><summary><mark class="highlight-orange">Netwerk </mark>deel bepalen→ eerste 18bits van IP:</summary><p id="51b5ad17-e44c-4b5f-ab0b-64e2400c1c56" class=""><mark class="highlight-orange">1010 1100 0001 1110 00</mark></p><p id="7fe226ea-926f-4e10-b993-3e274dc0701e" class="">de rest opvullen met 0</p><p id="dc30bc32-3887-4e58-b4b0-9a021f63ee60" class=""><mark class="highlight-orange">1010 1100 0001 1110 00</mark><mark class="highlight-teal">00 0000 0000 0000</mark></p><p id="06c30534-96cf-487e-9b48-021b0ffef6a8" class="">in dotted decimal→ 172.30.0.0</p></details></li></ul><ul id="2a4024d5-29b7-4d11-bdda-edd7a898ef56" class="toggle"><li><details open=""><summary><mark class="highlight-teal">HOST</mark> deel bepalen→ de rest</summary><p id="cdd2be41-c27d-41b7-a05f-662e830e4f26" class=""><mark class="highlight-teal">00 1111 0001 0010</mark><br/>dotted decimal→15.18<br/></p></details></li></ul><p id="0b3af5a9-3c7e-4d0a-a5aa-5b285be2802b" class="">
+</p></details></li></ul><p id="54732778-a7c3-4b67-8d54-5bdefb79f40a" class="">In CMD wordt de slash vaak als procent voorgesteld<br/>/24 → %24<br/></p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">IPV4: Soorten addressen</summary><div class="indented"><ol type="1" id="957c612b-1959-49d0-86c0-347f941bbaa4" class="numbered-list" start="1"><li>NetwerkAdres <p id="403a6238-d911-4067-8d22-d97602307f4c" class="">→ Host nummer 0 vb: 192.168.0.0.<br/><br/><span style="border-bottom:0.05em solid">Dit is niet toegankelijk voor hosts</span></p></li></ol><ol type="1" id="68dc9e1d-647a-4353-a3e1-77be13022879" class="numbered-list" start="2"><li>BroadcastAdres<p id="13640b9d-9601-4258-948c-dcd248c60c27" class="">→ Hoogst mogelijke adres binnen het logisch netwerk. vb 192.168.0.255<br/>Versturen naar dit netwerk zorgt er voor dat gegevens naar iedereen binnen dit netwerk verstuurd wordt.<br/></p><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="2ad7f470-7980-4003-979b-0d3743d08cba"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">NIET ELK nummer dat eindigt op 255 is een broadcast. Sommige netwerken hebben een MASK die toelaat om bv 9 bits aan hosts toe te laten met als gevolg dat het hoogst mogelijk adres niet per se eindigt op 255. Dus het hoogste mogelijke adres is niet altijd 255 </div></figure><p id="43dc32c6-ba28-4047-b555-30bdf36f7a4b" class=""><span style="border-bottom:0.05em solid">Dit is ook niet toegankelijk voor hosts</span></p></li></ol><ol type="1" id="beb43f2d-9d89-4918-993b-e62398a9dc2d" class="numbered-list" start="3"><li>Al de rest er tussen zijn HOST adressen</li></ol><p id="454ee35d-ed72-49d7-94eb-860c5964f9dd" class="">
+</p><p id="bdbeacad-f818-4622-83e5-8cc6be17089c" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">IPV4: Routing (intro, komt later terug)</summary><div class="indented"><p id="6f46ff66-5506-4141-9dc6-67a5ddc0a11e" class="">10.0.0.11/24 wil versturen naar 10.0.0.22/24. Ze bevinden zich in hetzelfde logische netwerk.</p><p id="bd093546-f8ac-46c7-8303-ea21082453a9" class="">Om te kunnen communiceren dient computer A het MAC adres van comp B te kennen</p><p id="935e1275-c32a-4105-9797-a225bdbd1856" class="">A stuurt een ARP-request. B stuurt een ARP-Response terug waarin zijn MAC adres zit.</p><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="3f09521f-248b-481b-be5b-bd9f2342055c"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Computers communiceren niet met elkaars IP adres maar met elkaars MAC adres. En gaat via het IP-Adres en een ARP-request+response het MAC adres opvragen.</div></figure><p id="b251e02c-201a-427a-90fe-d6260bd59221" class="">Indien comp A 10.0.0.11/24 wil versturen naar comp C 10.0.1.33/24 Ze bevinden zich niet in hetzelfde logische netwerk.  dus kunnen niet rechtstreeks doorsturen.<br/>Comp A zal het bericht sturen naar zijn gateway (router). Deze gaat dit ofwel versturen naar compC ofwel naar zijn eigen gateway(naar ISP) om dan te routen naar een andere ISP (via verschillende routers) en terug naar beneden tot de PC gevonden werd.<br/>Routing gaat dus omhoog in hierarchie tot een gemeenschappelijk niveau bereikt wordt, en terug naar beneden in hierarchie tot de host gevonden werd.<br/></p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">IPV4: aantal hosts</summary><div class="indented"><p id="1b2f8625-4211-4107-87db-2bc8cbf1019e" class="">Je moet weten hoeveel hosts je nodig hebt bij het opstellen van een eigen netwerk</p><p id="ac06c5cd-3800-43c8-81be-5d012aabcd69" class="">Via verschuiven van subnet kun je dus plaatsen vrijmaken.<br/>2^(32-CIDRwaarde) -2<br/>-2 om de 0 en broadcast weg te rekenen<br/></p><p id="99980195-3b1c-479a-84c9-e8f017cb9a2a" class="">vb 172.27.0.0/20 <br/>→ 2^(32-20) - 2 = 2^(12) -2 <br/></p></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">3. IPV6</summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Examen Tips</summary><div class="indented"><p id="a3514aac-ed4a-4d8f-b70b-c80d99b20091" class="">Te kennen: <br/>Maak het adres zo kort mogelijk<br/>herstel het adres naar zijn originele volledige waarde<br/>Geef van een adres wat de routing prefix, subnet ID en node ID is.<br/></p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Inleiding</summary><div class="indented"><p id="662b0e01-d488-4093-ae3a-ce9e8adf231b" class="">IPV4 onvoldoende aantal addressen. </p><p id="92cd1d7e-7ec5-4e50-8825-871f603b2659" class="">Manier om dit te besparen is NAT (Network adress translation)</p><p id="631103c1-f45e-41ce-bbde-aba42bc8b079" class="">Daarom gebruiken we momenteel nog steeds hoofdzakelijk IPV4.</p><p id="93f00941-553a-44d0-b1f4-e204b32d3fed" class="">Grote voordeel van IPV6→ NAT zou overbodig worden (in praktijk werd dit niet zo doorgevoerd)</p><p id="ebe47593-9982-41f8-a40d-6416b1a63702" class="">128 bits → 16 bytes</p><p id="3881854b-15ab-4e82-afa5-8606de099f9c" class="">geen dotted decimal</p><p id="7e164f71-bd0f-4d1a-8804-36181809aef9" class="">Dit wordt voorgesteld in HEX<br/>vb:<br/>fe80:58a0:2122:0602:eeba:0022:0000:0001<br/></p><p id="601af840-79d7-4583-8547-3d94d86048ff" class="">Elke groep is een voorstelling van 4 hexadecimale cijfers, 4 bytes, Dit heet een hextet.</p><p id="03ceda5f-1edd-418e-9dea-77ff3fbb690b" class="">worden van elkaar gescheiden met een dubbele punt</p><p id="b3512573-994f-47d2-a96c-bd6c8962ee31" class="">Dit wordt ook onderverdeeld in onder andere een netwerkgedeelte en een node gedeelte (=host)<br/><br/><strong>⇒ Dit wordt eigenlijk in 3 delen onderverdeeld. niet zoals ipv4 in 2 delen</strong></p><p id="6ae3332f-05a9-4c84-b418-0a03bf37b723" class="">CIDR blijft dezelfde notatie⇒ IPV6/CIDR<br/>vb.  fe80:58a0:2122:0602:eeba:0022:0000:0001/64<br/><div class="indented"><p id="f2446b05-3e9a-46d3-9e6c-e0f58e11e453" class="">CIDR nooit meer dan 64</p></div></p><p id="73480e74-d0de-4dba-809a-9e5857058606" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Adressen afkorten (te kennen)</summary><div class="indented"><p id="b6267e10-0a52-461b-8844-dfe171067829" class="">IPV6 notatie is een stuk moeilijker om als mens mee te werken.<br/>Echter kunnen we dit veel korter weergeven<br/></p><p id="c03b96d2-092c-4b41-9a46-d5cb9d4658fb" class="">
+</p><p id="6d7bb9c1-8d68-4114-9bc2-7506a88d0b2f" class="">Binnen een hextet mag je voorloopnullen weglaten<div class="indented"><p id="9865aced-de41-4f2d-8e32-0716090014ce" class="">→ fe80:0001 wordt fe80:1</p></div></p><p id="8963ecc0-4ceb-4f31-8a5f-a3fd84d24813" class="">je mag achtereenvolgende 0en vervangen door “::” (enkel 1x per ipv6)<div class="indented"><p id="b17b6992-17fe-4066-b0fc-30ac62ac71d0" class="">→ eeba:0022:0000:0000:0001 → eeba:0022::0001<br/>(plus vorige regel) → eeba:22::1<br/></p><p id="2c2dd3fb-7076-4f2f-a4ca-285ee4572bbe" class="">Je mag steeds maar 1 keer de nullen weglaten zodat je kunt terugvinden waar en hoeveel 0 sextetten er vervangen werden.</p></div></p><p id="49ea10a3-f3fa-40e1-b4da-24b4277c0fb9" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Routing prefix en subnet ID</summary><div class="indented"><p id="f3ec3b69-0c4c-470d-8134-cf1748b48b54" class="">Standaard wordt een IPV6 opgedeeld in 2 stukken van 64 bits</p><p id="b8a1af4d-c2e7-4290-a4ef-a71937cccf34" class="">1e deel is netwerkadres, 2e is het node adres</p><p id="1cdc30ea-f79c-498b-829a-0a93aedb8b3d" class="">MAAR dit klopt niet helemaal<br/>Het eerste gedeelte kan verder opgedeeld worden in nog 2 delen<br/>de routing prefix en het subnet ID.<br/></p><p id="3a26356b-5405-44ec-b621-4581ea354b34" class="">cidr dient voor het opdelen van het netwerkgedeelte.<br/>enerzijds routing prefix anderzijds subnet ID<br/>vb ipv6/48 → de eerste 48 bits zijn routing prefix<br/></p><p id="d10c1e9d-11cc-4a46-87ed-773d9d14a042" class="">
+</p><p id="4af9e38a-c89c-4443-b84f-c103ecf0dcf6" class="">De standaard CIDR waarde is dus steeds 64. In theorie kan een grotere waarde gekozen worden.</p><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Routing prefix</summary><div class="indented"><p id="a8ed3316-c70e-4a8f-9817-5e36c6130086" class="">Voor routing over het internet</p><p id="90e92b56-e714-4f61-8db6-b073bd824ed3" class="">Router krijgt de routing prefix van de ISP.</p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Subnet ID</summary><div class="indented"><p id="361f51af-9ab0-4302-9e9b-6b8c274e06af" class="">Bepaalt het netwerk waarin de host zich bevindt. Lokale netwerkbeheerder bepaalt dit</p></div></details><p id="9c89bb71-6a7b-4c9e-bc45-dae2e3657f81" class="">Het idee is dat elke router een unieke routing prefix krijgt, gevolgd door wat geregeld werd door de netwerkbeheerder (subnet ID en node ID)<br/>het gevolg zou zijn dat elk adres dus uniek is. Dus iedereen heeft een uniek publiek IP. Lokale IPs bestaan niet meer.<br/>Echter werd dit idee tegen gehouden door ISPs en <br/></p></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">4. OSI -TCP/IP-Routing-NAT</summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">OSI → moet niet kennen!</summary><div class="indented"><p id="286e6e90-18cf-429a-97e5-23436f5438cf" class="">Organisation For Standardisation</p><p id="7d4e666e-fc14-443c-ade3-9334cbeb1fde" class="">Open system interconnection<br/>Geen afkorting maar afgeleid van griekse ISOS (gelijk)<br/></p><p id="9786a179-8776-41f4-943b-59e282e7e293" class="">Internationale standaarden voor communicatie tussen systemen.<br/>Een gelaagd model→ 7 lagen!<br/>Een standaard voor het communiceren van PCs met netwerk en met elkaar<br/>Dit werd niet praktisch gebruikt. Maar zijn opvolgers wel. Waaronder TCP/IP<br/></p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">TCP/IP Stack</summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">TCP/IP stack bestaat uit 4 lagen:</summary><div class="indented"><ol type="1" id="c2ab625e-b97b-4e88-839e-b5ab961b5509" class="numbered-list" start="1"><li>Application<ol type="a" id="2e5d8725-a051-4147-ae71-b1d72127e6bc" class="numbered-list" start="1"><li>Protocollen: FTP,SMTP,SNMP,..</li></ol></li></ol><ol type="1" id="a8aa040f-30c0-4e5a-b150-974f0aee9ac1" class="numbered-list" start="2"><li>Transport<ol type="a" id="2295f6fa-1f14-477e-bf69-e0b33c8f35c4" class="numbered-list" start="1"><li>Protocollen: TCP, UDP</li></ol></li></ol><ol type="1" id="1e52c6f7-9421-4d3f-80a4-40c2bceceac9" class="numbered-list" start="3"><li>InterNetwork (network of IP layer)<ol type="a" id="85093581-b273-4c3d-98da-813789cbfcd8" class="numbered-list" start="1"><li>Protocollen: IP,ICMP,IGMP</li></ol></li></ol><ol type="1" id="84938070-4184-4910-bab8-9b4b46bdf15f" class="numbered-list" start="4"><li>Network Interface (Link layer)<ol type="a" id="b2975d67-6fd3-4195-8df7-56b9cde92bbe" class="numbered-list" start="1"><li>Protocollen: Ethernet,X.2S,ARP,OSPF,NDP,…</li></ol></li></ol><p id="a293fb6b-36c6-4277-87ec-b2aa2311e45e" class="">
+</p><p id="e2ce8db2-b2de-4d87-89d2-9fe72b70d2d4" class="">2, 3 en 4 zijn belangrijk voor ons. ⇒ verhaal van MAC IP en PORTS</p></div></details><p id="83de5d57-879a-4f1f-a7d9-7560adaac067" class="">We spreken van STACK want er is een verzameling van meerdere protocollen.</p><p id="970a47e3-05e7-4648-9fa0-43de999d335f" class="">Elke layer voegt een header toe met informatie aan de data.</p><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Application Layer</summary><div class="indented"><p id="0e936efe-bff2-4531-bdc5-b833933a6d70" class="">verdeelt de data op in blokjes</p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Transport Layer</summary><div class="indented"><p id="33d9f3fa-f764-4605-943c-fd21dc43c3ff" class=""><span style="border-bottom:0.05em solid"><strong>Poorten worden toegevoegd aan de header</strong></span></p><p id="30286aaf-c831-4b78-89fa-07d8c85e8158" class="">UDP VS TCP</p><ul id="a86af307-8d50-4aa5-b5a7-71cc80bf1b02" class="toggle"><li><details open=""><summary>UDP (User Datagram Protocol)</summary><ul id="ed9e4433-9a67-4971-b33e-467e5e76c9bd" class="bulleted-list"><li style="list-style-type:disc">Sneller</li></ul><ul id="4d4c957b-d398-4f22-9cfb-a34c68ddf801" class="bulleted-list"><li style="list-style-type:disc">Gegevens kunnen verloren gaan</li></ul><ul id="c21c0d07-5f17-4637-bac9-a7b3acf4ff39" class="bulleted-list"><li style="list-style-type:disc">Gegevens zijn niet genummerd, er wordt geen rekening gehouden of de ontvanger de data ontving.</li></ul><ul id="b1b78d47-ac43-4b4f-8a42-fe458b44560c" class="bulleted-list"><li style="list-style-type:disc">“connectieloos protocol”</li></ul></details></li></ul><ul id="3624bc60-e482-42a1-9183-acab02c15a71" class="toggle"><li><details open=""><summary>TCP (Transmission Control Protocol)</summary><ul id="ef26685f-8483-4a63-a9ad-3fb213365349" class="bulleted-list"><li style="list-style-type:disc">connectie georienteerd protocol</li></ul><ul id="8afb05e6-a255-4b5c-aceb-6b6582f831dd" class="bulleted-list"><li style="list-style-type:disc">Langzamer</li></ul><ul id="7f8590b7-34ac-4ec4-9bf9-9e0ba8cb8c9e" class="bulleted-list"><li style="list-style-type:disc">Gegevens worden genummerd</li></ul><ul id="68180a0b-011b-4b52-ae3f-94f1b45c1dbe" class="bulleted-list"><li style="list-style-type:disc">Enkel wanneer alle data ontvangen is is het versturen gelukt, doordat er voortdurend bevestigingen (ACK of NACK signaal) terug gestuurd worden.<ul id="ffa0dd80-7faa-4057-91dd-e23ac9fe624a" class="bulleted-list"><li style="list-style-type:circle">(ACK = ACKnowledge, NACK = Not ACKnowledge)</li></ul></li></ul><ul id="891fe2b3-9cc4-414a-842b-67c0068fc123" class="bulleted-list"><li style="list-style-type:disc">Betrouwbaarder</li></ul></details></li></ul><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Wat wordt nu toegevoegd?</summary><div class="indented"><ul id="a9388ea9-8ef3-4700-8300-f7eeaf6f7cb1" class="toggle"><li><details open=""><summary>UDP</summary><ul id="6aef4511-c5b5-4b91-8ea7-a846384bb05c" class="toggle"><li><details open=""><summary>beperkt: </summary><ul id="3db96830-0185-4fee-a013-a41422d26235" class="bulleted-list"><li style="list-style-type:disc">checksum </li></ul><ul id="29a489e6-b3c6-49f3-bbd4-343680181c66" class="bulleted-list"><li style="list-style-type:disc">source Port (wordt bepaald door OS, elke tabblad op browser heeft een uniek poortnummer)</li></ul><ul id="2347dc2c-23eb-4ae7-bdd6-7d15134133e7" class="bulleted-list"><li style="list-style-type:disc">destination Port (80 of 443 voor web surfing)</li></ul><ul id="72a7a47f-2941-42d4-890b-2f5e156fa00d" class="bulleted-list"><li style="list-style-type:disc">Length</li></ul></details></li></ul></details></li></ul><ul id="da544b6c-e023-4e25-b98f-dd679222c894" class="toggle"><li><details open=""><summary>TCP</summary><ul id="f572c5cc-7e12-4221-923c-11a2cf05baaa" class="toggle"><li><details open=""><summary>Veel uitgebreider, bevat o.a.:</summary><ul id="c8aca061-295b-4e24-b8a8-04a2aafbcc76" class="bulleted-list"><li style="list-style-type:disc">checksum </li></ul><ul id="e6a4688f-7e63-4b10-8aa8-bf5e9a294948" class="bulleted-list"><li style="list-style-type:disc">source Port (wordt bepaald door OS, elke tabblad op browser heeft een uniek poortnummer)</li></ul><ul id="1442c95d-b4cd-4c63-b3d4-62f04454bcba" class="bulleted-list"><li style="list-style-type:disc">destination Port (80 of 443 voor web surfing)</li></ul><ul id="d3545a06-6846-4fce-828c-88a84d0bbb39" class="bulleted-list"><li style="list-style-type:disc">Length</li></ul><ul id="fe5d1e2c-efd8-48b6-9bec-fd0288bd92a1" class="bulleted-list"><li style="list-style-type:disc">SEQUENCE number</li></ul><ul id="47921984-bbba-4cca-bc76-9fbbbadfa70d" class="bulleted-list"><li style="list-style-type:disc">(enkel ontvanger) ACK of NACK</li></ul><ul id="8fab00eb-f797-4e4a-b6cc-8fd4f8a77013" class="bulleted-list"><li style="list-style-type:disc">flags (om aan te geven of een ACK wordt teruggegeven of bv FIN bit om aan te geven dat dit het laatste pakket is)</li></ul></details></li></ul><p id="860d187b-c86d-4453-863d-58e5960e2e05" class="">
+</p></details></li></ul></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">InterNetwork Layer of IP layer</summary><div class="indented"><p id="f3d2917c-1fae-4b9b-903f-c50edf79ad2b" class="">Een header met IP address wordt toegevoegd aan de data.</p><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Wat wordt nu toegevoegd?</summary><div class="indented"><ul id="9aa0a25c-5cbb-4d7f-9273-bc7ba333affc" class="bulleted-list"><li style="list-style-type:disc">IP-versie</li></ul><ul id="05887fd5-bf48-40a1-9796-f1b93ca0c68a" class="bulleted-list"><li style="list-style-type:disc">Time to live (byte)<ul id="6c298914-82db-48b9-b61d-0b00382b07a5" class="bulleted-list"><li style="list-style-type:circle">Bij elke “hop” (dus router die gepasseerd wordt), wordt de TTL met 1 verminderd. Als TTL=0, dan wordt het pakket niet meer verder doorgestuurd.</li></ul></li></ul><ul id="c451db0c-81bd-4a33-9039-912fb89071c7" class="bulleted-list"><li style="list-style-type:disc">source IP<ul id="06271db4-c870-4ee1-95d0-d69cab83940c" class="bulleted-list"><li style="list-style-type:circle">IP adres van verzender</li></ul></li></ul><ul id="b0ba164d-aaad-4da6-bcd3-8655961f59d3" class="bulleted-list"><li style="list-style-type:disc">destination IP<ul id="930cd4e9-0f71-4e67-aec8-f33620da155d" class="bulleted-list"><li style="list-style-type:circle">IP adres van ontvanger</li></ul></li></ul></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Link Layer of Network Access layer of network interface layer</summary><div class="indented"><p id="d7dff1de-a91c-4ddf-953c-a3002108e8e1" class="">Hier wordt een header met het MAC addres toegevoegd</p><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Wat wordt nu toegevoegd?</summary><div class="indented"><ul id="8ad852e3-0fd5-4832-9de8-7877756a1246" class="bulleted-list"><li style="list-style-type:disc">Destination MAC address</li></ul><ul id="80ca7dda-13b6-4cf8-a1e0-0cace5d7941e" class="bulleted-list"><li style="list-style-type:disc">Source MAC address</li></ul><ul id="f10d6aad-26cb-4d96-8f64-35d3701c6ef5" class="bulleted-list"><li style="list-style-type:disc">frame check sequence</li></ul><ul id="d6899c0b-0885-41e6-b1f1-81dfc84913d8" class="bulleted-list"><li style="list-style-type:disc">Type ⇒ IPv4 of IPv6</li></ul></div></details></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Routing</summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Routing table</summary><div class="indented"><p id="7290819e-6b07-473e-b938-018161653fb1" class="">Elke host beschikt over een routing table, hierin wordt bepaald op welke interface (NIC) een pakket dient geplaatst te worden.</p><p id="a002c938-f8ef-443e-b7ee-70a79901e861" class="">PAS OP. NETMASK =/= subnetmask. zelfde principe, maar niet zelfde.</p><figure id="b13b7bd0-d759-489f-9195-b36cd18d4bc0" class="image"><a href="Advanced%20IT%20skills%203d29d267668b478f84f3bc2c1aed4a27/Untitled.png"><img style="width:623px" src="Advanced%20IT%20skills%203d29d267668b478f84f3bc2c1aed4a27/Untitled.png"/></a></figure><p id="ec59dbda-a928-4c5c-bd55-d944243f9422" class="">Routing table in zijn eenvoudigste vorm.</p><p id="c4150950-3f49-45ab-bfe7-58f16c0061a4" class="">Als de gateway hetzelfde is als interface kan de IP</p><p id="864496f2-dd60-4b5d-bc5f-cf1cf4963f06" class="">routing tabel bepaald via welke interface (NIC) de data verstuurd moet worden (ofwel lokaal: 127.0.0.1) ofwel naar het netwerk via (192.168.0.100)</p><ul id="62347e4f-46ce-4af2-b69c-cfeb56b0ad14" class="toggle"><li><details open=""><summary>vb 1: </summary><p id="cbc42f88-63c2-4c56-9740-c2c9de504ec6" class="">Alles dat je wil versturen naar een IP nummer beginnend met 127?<br/>Host kijkt naar de routing tabel waar dit naar toe gestuurd moet worden.<br/></p><p id="c3a8b6dc-d34b-47b3-9a6e-375c08dc4300" class="">⇒ moet op interface 127.0.0.1, dus wordt intern gehouden en niet naar de netwerkkaart verstuurd</p></details></li></ul><ul id="9ab6a7ee-e7f6-4141-839d-2a8d50495b13" class="toggle"><li><details open=""><summary>vb 2: </summary><p id="6477a002-9ba1-4a43-99a4-5340780e5700" class="">Alles dat je wil versturen naar 192.168.0.100?<br/>Host kijkt naar de routing tabel waar dit naar toe gestuurd moet worden<br/></p><p id="7a9bcbe1-fc13-40a6-8a3e-cb704a9d334a" class="">steeds kijken naar de netmask. In dit geval is er 1 lijn in de routing tabel die specifiek over 192.168.0.100 verwijst.</p><p id="b9cb60d6-bd5f-4204-bd9a-674f5a89c387" class="">⇒ moet op interface 127.0.0.1, dus dit is eigen PC, niet externe netwerkkaart</p></details></li></ul><ul id="86d66939-7bfe-4e85-8849-e65df508dde2" class="toggle"><li><details open=""><summary>vb 3: </summary><p id="1eb8fb30-1a5a-4486-b0fa-c2cfb33672c3" class="">Alles dat je wil versturen naar 192.168.0.1?<br/>Host kijkt naar de routing tabel waar dit naar toe gestuurd moet worden<br/></p><p id="beb1ea18-4f7e-4006-a24f-06eec286f3b9" class="">Ook hier kijken naar de netmask. In dit geval is er alweer 1 lijn in de routing tabel die specifiek over 192.168.0.1 verwijst (mask 255.255.255.255).</p><p id="ac939288-e0d4-46b9-bfbb-02e65ff4d873" class="">⇒ moet op interface 192.168.0.100. Dit is de netwerkkaart in dit geval, dus wordt op het netwerk verstuurd</p></details></li></ul><ul id="1adb6e38-7ed8-4f07-aaec-842eea3762de" class="toggle"><li><details open=""><summary>vb 4: </summary><p id="b5165d6b-c7e7-4877-a4fe-fb7b00442dab" class="">Alles dat je wil versturen naar 192.168.0.0?<br/>Host kijkt naar de routing tabel waar dit naar toe gestuurd moet worden<br/></p><p id="094bd54a-fdd5-455e-b8cb-36e8b5cfc4fc" class="">Hiervoor zitten we op lijn 3 van de tabel. </p><p id="314920be-7052-4bf9-9890-bf60d4ae6b26" class="">⇒ moet op interface 192.168.0.100. Dit is de netwerkkaart in dit geval, dus wordt op het netwerk verstuurd. </p></details></li></ul><ul id="b59956d9-5900-46e2-a5e4-f3643fb9a0c6" class="toggle"><li><details open=""><summary>vb 4: </summary><p id="d47c2092-372f-49b2-922d-1bd4277753fb" class="">Alles dat je wil versturen naar 0.0.0.0?<br/>Host kijkt naar de routing tabel waar dit naar toe gestuurd moet worden<br/></p><p id="22ce1800-7fa6-4d03-ae18-ba6fe5174678" class="">Hiervoor zitten we op lijn 1 van de tabel. </p><p id="1c0f5427-a31d-4daf-b838-9b7f5e279595" class="">⇒ moet op interface 192.168.0.100. Dit is de netwerkkaart in dit geval, dus wordt op het netwerk verstuurd, Hierdoor weten we ook dat dit een IP nummer is die niet in eigen netwerk zit, gateway adres is hier niet gelijk aan de interface IP. Dus deze keer wordt de data naar de router verstuurd. PC kan dit niet zelf oplossen.<br/>elk ander voorbeeld wel<br/></p></details></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Packet forwarding</summary><div class="indented"><p id="d00b35e1-3667-41cd-844a-18b45d59eaea" class="">Wanneer een pakket de bestemmeling niet rechtstreeks kan bereiken(want de ontvanger bevindt zich niet in hetzelfde logische netwerk) wordt een pakket geforward naar het gateway adres (doorgaans de router, of smart switch)</p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Lokaal pakket versturen:</summary><div class="indented"><p id="20c797b1-9d62-4fab-9c79-e9e0a597d694" class="">In verstuurd pakket zit :</p><table id="26e16148-0bcd-48b5-a6e1-ba7b9e175825" class="simple-table"><tbody><tr id="e6872c56-3acb-4db8-af95-d7b25b991a12"><td id="JNCa" class=""><strong>Field</strong></td><td id="WCwd" class=""><strong>Value</strong></td><td id="S?dE" class=""><strong>Description</strong></td></tr><tr id="97e65d02-e985-440b-9e0c-747f9d3d3f00"><td id="JNCa" class="">Source IP</td><td id="WCwd" class="">192.168.1.1</td><td id="S?dE" class="">IP address of the sender</td></tr><tr id="63bf596d-63db-47e2-8957-03befd455b14"><td id="JNCa" class="">Source MAC</td><td id="WCwd" class="">FA:16:3E:87:9C:2A</td><td id="S?dE" class="">MAC address van verstuur PC</td></tr><tr id="8752c147-12a9-47ce-a9e5-6d60bf7e3436"><td id="JNCa" class="">Destination IP</td><td id="WCwd" class="">192.168.2.2</td><td id="S?dE" class="">IP address of the receiver</td></tr><tr id="b64736ab-89ff-4092-872d-7d9295fed1b4"><td id="JNCa" class="">Destination MAC</td><td id="WCwd" class="">FA:16:3E:3F:FD:3C</td><td id="S?dE" class="">MAC address van de LAN NIC van de gateway</td></tr></tbody></table><p id="1a2b5398-0463-4155-a566-b1546a6a3352" class="">Gateway opent dit en leest. Ziet dat het mac adres wel het zijne is maar het IP adres is voor iemand anders. Dus gaat de router kijken in de Routing tabel, en kijken naar waar dit pakket moet doorgestuurd worden (ofwel rechtstreeks ofwel via andere router) en vult het doel MAC adres in. en zijn eigen MAC adres als verstuurder</p><table id="13a35182-a47d-4b16-b719-c15ce2c1e04e" class="simple-table"><tbody><tr id="1227df8e-3aa1-45ac-ba7c-523e8d14f301"><td id="~IF:" class=""><strong>Field</strong></td><td id="g^CG" class=""><strong>Value</strong></td><td id="ev_S" class=""><strong>Description</strong></td></tr><tr id="ec151b82-c50f-4362-825e-52abbed32966"><td id="~IF:" class="">Source IP</td><td id="g^CG" class="">192.168.1.1</td><td id="ev_S" class="">IP address of the sender</td></tr><tr id="e8ad071b-1a4c-4374-8f93-f75b419ae17b"><td id="~IF:" class="">Source MAC</td><td id="g^CG" class="">FA:78:12:55:0:AC</td><td id="ev_S" class="">MAC address van 2e NIC van de router (WAN kant)</td></tr><tr id="df799654-6edf-4f32-a745-06e4a91e9834"><td id="~IF:" class="">Destination IP</td><td id="g^CG" class="">192.168.2.2</td><td id="ev_S" class="">IP address of the receiver</td></tr><tr id="98a6dad2-743a-4fa8-9911-43e79cc77262"><td id="~IF:" class="">Destination MAC</td><td id="g^CG" class="">FA:16:3A:15:f8:2B</td><td id="ev_S" class="">MAC address van het doel (nieuwe router of doelPC)</td></tr></tbody></table><p id="d77b32de-1c4c-479b-a3b0-08f963231da0" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">NAT = Network Address Translation</summary><div class="indented"><p id="09301f6c-e9ba-4a68-b6c7-b92e4ddc1724" class="">Versturen via internet zal redelijk gelijkaardig verlopen echter met veel meer routers. Binnen 1 zelfde netwerk wordt vaak 1 publieke IP gedeeld (meestal 192.168.x.x) Het mechanisme dat er voor zorgt dat je met meerdere private IPs, 1 publieke IP kunt gebruiken.</p><p id="d08281e1-eed6-48ad-92c5-fb4de15240f9" class="">Te vinden via <a href="http://www.whatsmyip.com">www.whatsmyip.com</a></p><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">NAT werking kort samengevat:</summary><div class="indented"><ul id="8d96b76d-cafd-461a-885e-0a6e63055f75" class="bulleted-list"><li style="list-style-type:disc">Alle hosts binnen het netwerk die een verzoek willen versturen naar het netwerk sturen een pakket naar hun gateway (=router)</li></ul><ul id="d91873d2-27d6-4398-a3d6-c1f9d4756c65" class="bulleted-list"><li style="list-style-type:disc">Router noteert het IP, het MAC en poortnummer waarop het verzoek verstuurd wordt in zijn NAT tabel. </li></ul><ul id="f7ddc45d-f3b8-4acf-8914-8ad5279f0f07" class="bulleted-list"><li style="list-style-type:disc">De router stuurt het bericht door naar zijn eigen gateway (ISP)</li></ul><ul id="a2b9958e-8129-47fd-b4c3-c59aa22eb1fe" class="bulleted-list"><li style="list-style-type:disc">De router gaat naast het wijzigen van de MAC adressen, ook de bron IP adres wijzigen. Jouw private IP zal worden overschreven en daar wordt nu zijn publieke IP adres geplaatsd.  Maar er staat wel genoteerd welk privaat IP de request maakte.</li></ul><ul id="10deca3c-62e6-4308-8ac2-a9d1194d3783" class="bulleted-list"><li style="list-style-type:disc">wanneer het pakket uiteindelijk de bestemmeling bereikt kan dezze een antwoord terugsturen, hij beschikt immers over het publieke IP waar de lokale computer zich achter bevind</li></ul><ul id="6d483349-22c9-424a-b601-087b7a6d49e6" class="bulleted-list"><li style="list-style-type:disc">Het antwoord komt op een bepaald moment terug aan de WAN kant van de router</li></ul><ul id="1bf51101-5b5b-4281-a640-183d6c4559c1" class="bulleted-list"><li style="list-style-type:disc">de router gaat op zoek in zijn NAT tabel om te weten wie de request maakte</li></ul><ul id="da44bf24-357a-4371-956c-df61b5c587cd" class="bulleted-list"><li style="list-style-type:disc">De router past het IP en MAC adres terug aan en plaatst het pakket terug op het lokale netwerk</li></ul><ul id="9e71e980-8f29-417b-96bd-9fecae5ba782" class="bulleted-list"><li style="list-style-type:disc">Er kan zich echter nog een probleem voordoen. De OS van een computer bepaalt een poortnummer per tabblad.</li></ul><ul id="f08cf6ca-1f2c-4f40-9efb-9e5746bbee06" class="bulleted-list"><li style="list-style-type:disc">Het kan dus perfect gebeuren dat 2 computers binnen eenzelfde netwerk eenzelfde website willen bezoeken (eenzelfde request sturen dus)</li></ul><ul id="1044399c-9cc2-43f1-a055-3cece16a6b8b" class="bulleted-list"><li style="list-style-type:disc">Wanneer de router vaststelt dat er gelijktijdige verzoeken zijn naar eenzelfde IP nummer, door eenzelfde poortnummer dan zal een van beide poorten vervangen worden door een door de router zelf gekozen poortnummer (en de aanpassingen worden genoteerd in de NAT tabel)<ul id="c1ced763-95f5-485a-b775-06a71209a3fe" class="bulleted-list"><li style="list-style-type:circle">Dus de poortnummers worden ook bij gehouden (poortnummers worden dus gedeeld door de router), De oplossing is dus intern het poortnummer aanpassen en bij terugkomen dat pakket terug aanpassen en terug het originele poortnummer terug te sturen. </li></ul></li></ul><p id="f8b324ee-2005-4417-8a96-17c495cfc453" class="">
+</p></div></details><p id="130846d3-3f0d-44fb-ab96-e7c412e7d6ce" class="">Een combinatie van een IPnummer en poortnummer heet een SOCKET</p><p id="cce524b7-73da-4aae-b11c-72f0b6e4ea28" class="">Dus de socket van een verzoek is bv 192.168.0.100:3312</p><p id="421a1d31-8f65-4916-bdda-9aada0ffe6c4" class="">
+</p></div></details><p id="a5b01786-c9d5-4c5f-8ec5-927779501e45" class="">
+</p><p id="4a1cd993-78c6-445a-98d4-954780340edd" class="">
+</p></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">5. Poorten en Sockets</summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Poortnummers</summary><div class="indented"><ul id="b5057c89-10c0-4d4f-aa47-1a5a23c1a6ad" class="toggle"><li><details open=""><summary>Enkele Poortnummers:</summary><p id="ca06adc0-83e6-4179-a0fc-23cb3c90efa4" class="">applicaties kunnen hun eigen vastgelegd of instelbaar poortnummer hebben:</p><ul id="a40cbb88-ccac-4293-9dd8-15c90b66747a" class="bulleted-list"><li style="list-style-type:disc">RDP: 3389</li></ul><ul id="84b25c18-408c-4ba6-83ab-ce7d3e602edc" class="bulleted-list"><li style="list-style-type:disc">MS SQL: 1433</li></ul><ul id="5dec0fb3-17dd-4409-b556-fec7e2860e4c" class="bulleted-list"><li style="list-style-type:disc">http: 80</li></ul><ul id="a875541d-0ede-467c-8d32-f246ddd4c326" class="bulleted-list"><li style="list-style-type:disc">https: 433</li></ul></details></li></ul><ul id="98e1ca01-089c-42e8-b3ae-390edea08e1a" class="toggle"><li><details open=""><summary>Poortnummer </summary><ul id="812f11e3-57bc-42ca-a397-582cea238b99" class="bulleted-list"><li style="list-style-type:disc">0 → 1023: Well known ports(HTTP,FTP,SMTP,HTTPS)<ul id="9b297362-11c3-46f2-9d91-49d0da7c4b88" class="bulleted-list"><li style="list-style-type:circle">zeker niet gebruiken, vastgelegde standaarden</li></ul></li></ul><ul id="0d7a9b87-1b90-4ff3-bd84-b539fe9e4c7d" class="bulleted-list"><li style="list-style-type:disc">1024 → 49151: Registered Ports(MySQL,RDP,MSSQL)<ul id="cdc27428-10fd-4540-9d3b-734ea115edf6" class="bulleted-list"><li style="list-style-type:circle">Je kan deze eventueel gebruiken maar moet er zeker rekening mee houden dat je in problemen kan komen met een van die applicaties</li></ul></li></ul><ul id="92851d62-ac7c-49b9-b23f-da27d6dfc0f6" class="bulleted-list"><li style="list-style-type:disc">49152 → 65535: Free Ports<ul id="4687c15e-ae66-4b59-a703-07d7a6ad08fd" class="bulleted-list"><li style="list-style-type:circle">Deze kan je gebruiken voor jouw applicatie</li></ul></li></ul></details></li></ul><ul id="dd330d09-c473-48c6-a2e2-488d6f41197b" class="toggle"><li><details open=""><summary>poortnummers zien in cmd:</summary><ol type="1" id="ffd595b6-a89e-43e1-9fb1-cf11372f5504" class="numbered-list" start="1"><li>cmd as admin</li></ol><ol type="1" id="bb42af94-1a9d-4a7e-847d-4847a5b78d1b" class="numbered-list" start="2"><li>netstat -nao</li></ol></details></li></ul><ul id="daf4d924-d57e-4ed2-b1b3-5b6d5be1377a" class="toggle"><li><details open=""><summary>Ephemeral poorten</summary><p id="68acc5dd-79fc-482d-b4e1-0505d32f0b78" class="">browser zal zichzelf een poort toewijzen uit de range: 49152 → 65535:<br/><br/></p></details></li></ul><p id="afbf484c-1989-448a-aa7a-ab04579d3fc6" class="">poorten opzoeken online: <a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml">www.iana.org</a></p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">WinSocks</summary><div class="indented"><p id="e4c47329-c0b5-453e-aee2-5c34a466834a" class="">Er zijn heel veel verschillende betekenissen hiervan.<br/>In school: Het maken van een .net client/server applicatie die gebruik maakt van de .NET sockets bibliotheek<br/></p><ul id="88cc1e60-ea18-483c-a97c-6ac7d52694e4" class="bulleted-list"><li style="list-style-type:disc">endpoint = combinatie van IP en een poortnummer</li></ul><ul id="99fcbfa5-877e-4ce5-99ca-d98590790586" class="bulleted-list"><li style="list-style-type:disc">socket: de verbinding tussen 2 endpoints waarover communicatie KAN verlopen</li></ul><p id="96e1e54c-5c0a-4359-a58c-a11b6247ec8a" class="">Je kan in principe om het even wat maken met behulp van .net sockets. Wij gaan ons in de cursus beperken.<br/>Dit is communicatie tussen een server en meerdere klanten om informatie door te spelen van. (2 programmes dan, 1x server, 1x client)<br/>Beide zouden kunnen in 1 solution, maar het is eenvoudiger te debuggen als we in 2 solutions werken.<br/></p><p id="283fe97e-afe4-45ec-810d-d991e9846c83" class="">90% van de code in beide apps heeft weinig te maken met het onderwerp van dit hoofdstuk(sockets) maar dan met de werking van WPF.</p><p id="7ba51875-4465-45cf-bd53-953cbea6c57f" class="">
+</p><p id="5ff581dd-8067-4062-8f9a-cc61e95dfd3d" class="">Op het examen krijgen we een applicatie waar het belangrijke stuk te kort is en zal moeten aangevuld worden.  De onbelangrijke details van de code zullen al gegeven worden</p></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">7. MS active Directory</summary><div class="indented"><p id="8ac711a2-767d-484b-893c-bf0184bce193" class="">DNS</p><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">DHCP</summary><div class="indented"><p id="0710c221-c8e4-4f0e-8354-93c2afba8cc4" class="">Dynamisch IP adres toekennen aan clients door middel van een DHCP server.<br/>Er wordt in de pool nagekeken of er vrije adressen zijn, en dit toekennen.<br/></p><p id="a9f9d6c0-0d2c-4865-9f76-75200271a50c" class="">DORA: Discover Offer Request Acknowledge</p></div></details></div></details></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
