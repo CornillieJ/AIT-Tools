@@ -120,6 +120,9 @@ public partial class IPv6CalcWindow : Window
         TextBox relevantTextBox = sender == btnEnter ? txtFullIp : txtShortIp;
         relevantTextBox.Focus();
         relevantTextBox.CaretIndex = 0;
+        txtRouting.Clear();
+        txtNode.Clear();
+        txtSubnet.Clear();
         isUpdating = false;
     }
     
@@ -160,14 +163,20 @@ public partial class IPv6CalcWindow : Window
         if (IsTextBoxEmpty(txtFullIp)) BtnEnterShortToLong_OnClick(null,null);
         if(IsTextBoxEmpty(txtShortIp)) BtnEnter_OnClick(null,null);
         bool isValidCidr = int.TryParse(txtCIDR.Text, out int cidr);
-        if (!isValidCidr || cidr > 128 ) return;
+        if (!isValidCidr || cidr > 64)
+        {
+            txtRouting.Clear();
+            txtNode.Clear();
+            txtSubnet.Clear();
+            return;
+        }
         string fullIp = txtFullIp.Text.Trim();
         IEnumerable<string> firstHalf = fullIp.Split(":").Take(4);
         IEnumerable<string> secondHalf = fullIp.Split(":").TakeLast(4);
-        string routing = GetRoutingPrefix(cidr, firstHalf);
+        string routing = GetRoutingPrefix(cidr, firstHalf).Trim(':');
         txtRouting.Text = routing;
         txtNode.Text = string.Join(':', secondHalf).Trim(':');
-        txtSubnet.Text = GetSubnetId(cidr,firstHalf);
+        txtSubnet.Text = GetSubnetId(cidr,firstHalf).Trim(':');
     }
     private bool IsIPv6Valid(string iPv6)
     {
