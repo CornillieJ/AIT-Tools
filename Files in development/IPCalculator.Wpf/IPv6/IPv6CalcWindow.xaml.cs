@@ -21,6 +21,8 @@ public partial class IPv6CalcWindow : Window
     public IPv6CalcWindow()
     {
         InitializeComponent();
+        DataObject.AddPastingHandler(txtFullIp,OnPaste);
+        DataObject.AddPastingHandler(txtShortIp,OnPaste);
     }
     private void IPv6CalcWindow_OnLoaded(object sender, RoutedEventArgs e)
     {
@@ -223,5 +225,9 @@ public partial class IPv6CalcWindow : Window
         else if (formatted[position] == ':') position++;
         txtFullIp.CaretIndex = position;
     }
-
+    private void OnPaste(object sender, DataObjectPastingEventArgs e)
+    {
+        if (sender is not TextBox textBox) return;
+        textBox.SelectAll();
+    }
 }
