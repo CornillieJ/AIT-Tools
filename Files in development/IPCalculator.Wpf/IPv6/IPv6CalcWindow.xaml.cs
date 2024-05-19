@@ -85,16 +85,10 @@ public partial class IPv6CalcWindow : Window
 
     private bool IsMoreThanOneSegmentEmpty(IEnumerable<string> segments)
     {
-        try
-        {
-            segments.Single(s => s.Length == 0);
+        if(segments.Count(s => s.Length == 0) < 2 ) return false;
+        if (IsOnlyLast2SegmentsEmpty(segments) || IsOnlyFirst2SegmentsEmpty(segments))
             return false;
-        }
-        catch
-        {
-            if (IsOnlyLast2SegmentsEmpty(segments) || IsOnlyFirst2SegmentsEmpty(segments))  return false;
-            return true;
-        }
+        return true;
     }
 
     private bool IsOnlyLast2SegmentsEmpty(IEnumerable<string> segments)
