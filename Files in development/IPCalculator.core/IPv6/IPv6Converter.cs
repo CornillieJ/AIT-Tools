@@ -114,13 +114,13 @@ public static class IPv6Converter
     }
     public static string GetSubnetId(int cidr, IEnumerable<string> firstHalf)
     {
-        int amountOfRoutingSegments = (int)Math.Ceiling(cidr / 16F);
-        int amountOfSubnetSegments = 4 - amountOfRoutingSegments;
-        amountOfRoutingSegments = Math.Min(amountOfRoutingSegments, 3);
+        int amountOfFullRoutingSegments = (int)Math.Floor(cidr / 16F);
+        int partSegment = (int)Math.Ceiling(cidr / 16F) - amountOfFullRoutingSegments;
+        int amountOfFullSubnetSegments = 4 - amountOfFullRoutingSegments - partSegment;
         int amountOfLastBits = cidr % 16;
-        if (amountOfLastBits == 0) return string.Join(':', firstHalf.TakeLast(amountOfSubnetSegments));
-        IEnumerable<string> fullSegments = firstHalf.TakeLast(amountOfSubnetSegments);
-        string firstSegmentAsBits = GetLastSegmentAsBitString(firstHalf, amountOfRoutingSegments);
+        if (amountOfLastBits == 0) return string.Join(':', firstHalf.TakeLast(amountOfFullSubnetSegments));
+        IEnumerable<string> fullSegments = firstHalf.TakeLast(amountOfFullSubnetSegments);
+        string firstSegmentAsBits = GetLastSegmentAsBitString(firstHalf, amountOfFullRoutingSegments);
         string lastBits = GetCorrectBitStringFromFirstSegment(firstSegmentAsBits, amountOfLastBits);
         byte firstByte = ByteConversion.ConvertBitStringToByte(lastBits.Substring(0,8));
         byte lastByte = ByteConversion.ConvertBitStringToByte(lastBits.Substring(8));
