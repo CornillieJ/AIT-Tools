@@ -1,8 +1,10 @@
 ﻿using System;
+using System.CodeDom;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 using IpCalculator.Wpf.IPv4;
 using IpCalculator.Wpf.IPv6;
@@ -76,5 +78,32 @@ public partial class StartupWindow : Window
         {
             MessageBox.Show($"Error launching {ex.Message}");
         }
+    }
+    private void BtnSubnet_OnClick(object sender, RoutedEventArgs e)
+    {
+        SubnetChecker subnetWindow = new();
+        subnetWindow.Show();
+        btnSubnet.Background = Brushes.PaleGreen;
+    }
+    private void BtnCidr_OnClick(object sender, RoutedEventArgs e)
+    {
+        CidrConverter cidrConverter = new();
+        cidrConverter.Show();
+        btnCidr.Background = Brushes.PaleGreen;
+    }
+
+    private void BtnClose_OnClick(object sender, RoutedEventArgs e)
+    {
+        base.Close();
+    }
+
+    private void BtnMinimize_OnClick(object sender, RoutedEventArgs e)
+    {
+        base.WindowState = WindowState.Minimized;
+    }
+    private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+    {
+        if (e.ChangedButton == MouseButton.Left)
+            this.DragMove();
     }
 }

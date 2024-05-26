@@ -4,25 +4,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:IpCalculator.Wpf"
-        mc:Ignorable="d"
-        Title="ULTIMATE AIT tools" Height="300" Width="300" WindowStartupLocation="Manual" Left="0" Top="0">
+        mc:Ignorable="d" AllowsTransparency="true" WindowStyle="None"
+        MouseDown="Window_MouseDown"
+        Title="ULTIMATE AIT tools" Height="350" Width="300" WindowStartupLocation="Manual" Left="0" Top="0" Background="#2b2d42">
     <Grid>
-        <StackPanel Width="250">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"/>
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="btnMinimize" Click="BtnMinimize_OnClick" Foreground="White" Background="Transparent" Content="-" Padding="6,1" FontSize="12" Height="16" Margin="3,0"/>
+                <Button x:Name="btnClose" Click="BtnClose_OnClick" Foreground="White" Background="Transparent" Content="X" Padding="6,0" FontSize="10" Height="16" Margin="3,0"/>
+            </StackPanel>
+        
+        <StackPanel Grid.Row="1" Width="250">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Button}">
-                    <Setter Property="Margin" Value="0,10,0,0"/>
+                    <Setter Property="Margin" Value="0,5"/>
                 </Style>
-            </StackPanel.Resources> 
-            <Button x:Name="btnIPv4Calc" Content="IPv4 calculator" Click="BtnIPv4Calc_OnClick" Background="Coral"/>
-            <Button x:Name="btnIPv4Manual" Content="IPv4 manual calculator" Click="BtnIPv4Manual_OnClick" Background="LightCoral"
-                    Width="125" HorizontalAlignment="Right" Margin="0,1,0,0"/>
-            <Button x:Name="btnIPv6Calc" Content="IPv6 calculator" Click="BtnIPv6Calc_OnClick" Background="Coral"/>
-            <Button x:Name="btnSummary" Content="Open AIT Samenvatting" Background="Coral" Click="BtnSummary_OnClick"/>
-            <Button x:Name="btnMyNics" Content="My Network devices tool" Background="Coral" Click="BtnMyNics_OnClick"/>
-            <StackPanel Orientation="Horizontal">
-                <Button x:Name="btnNatBig" Width="120" Content="NAT tool normal" Background="Coral" Click="BtnNat_OnClick"/>
-                <Button x:Name="btnNatSmall" Width="120" Content="NAT tool small" Margin="10,10,0,0" Background="Coral" Click="BtnNat_OnClick"/>
-            </StackPanel>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="0,5,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <Border BorderBrush="#8d99ae" BorderThickness="2" Padding="5">
+                <StackPanel>
+                    <Button x:Name="btnIPv4Calc" Content="IPv4 calculator" Click="BtnIPv4Calc_OnClick" Background="Coral"/>
+                    <Button x:Name="btnIPv4Manual" Content="IPv4 manual calculator" Click="BtnIPv4Manual_OnClick" Background="LightCoral"
+                        Width="125" HorizontalAlignment="Right" Margin="0,1,0,0"/>
+                    <Button x:Name="btnCidr" Content="CIDR To Dotted Decimal Converter" Click="BtnCidr_OnClick" Background="Coral"/>
+                </StackPanel>
+            </Border>
+            <Border BorderBrush="#8d99ae" BorderThickness="2" Padding="5">
+                <Button x:Name="btnIPv6Calc" Content="IPv6 calculator" Click="BtnIPv6Calc_OnClick" Background="Coral"/>
+            </Border>
+            <Border BorderBrush="#8d99ae" BorderThickness="2" Padding="5">
+                <Button x:Name="btnSubnet" Content="Subnet Validator" Click="BtnSubnet_OnClick" Background="Coral"/>
+            </Border>
+            
+            <Border BorderBrush="#8d99ae" BorderThickness="2" Padding="5">
+                <StackPanel>
+                    <Button x:Name="btnSummary" Content="Open AIT Samenvatting" Background="Coral" Click="BtnSummary_OnClick"/>
+                    <Button x:Name="btnMyNics" Content="My Network devices tool" Background="Coral" Click="BtnMyNics_OnClick"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="btnNatBig" Width="120" Content="NAT tool normal" Margin="1,5" Background="Coral" Click="BtnNat_OnClick"/>
+                        <Button x:Name="btnNatSmall" Width="120" Content="NAT tool small" Margin="1,5" Background="Coral" Click="BtnNat_OnClick"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
         </StackPanel>
     </Grid>
 </Window>
