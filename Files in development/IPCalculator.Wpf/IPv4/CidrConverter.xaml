@@ -12,7 +12,7 @@
                 <Label FontSize="24" HorizontalContentAlignment="Center">Convert CIDR to Bitstring</Label>
                 <TextBox x:Name="txtCidr" Width="200" TextChanged="TxtCidr_OnTextChanged"/>
                 <Button x:Name="txtConvert" Width="100" Margin="5" Content="Convert!" Click="TxtConvert_OnClick"/>
-                <Label Margin="10" HorizontalContentAlignment="Center" x:Name="lblResult" />
+                <TextBox Margin="10" HorizontalContentAlignment="Center" x:Name="txtResult" TextChanged="TxtResult_OnTextChanged" Width="400"/>
                 <Label x:Name="lblAnswer" HorizontalContentAlignment="Center" FontSize="32"/>
             </StackPanel>
         </Border>

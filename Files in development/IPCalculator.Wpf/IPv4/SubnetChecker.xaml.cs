@@ -30,7 +30,7 @@ public partial class SubnetChecker : Window
         try
         {
             string subnetBitString = ByteConversion.ConvertDottedDecimalToIpBitString(subnet);
-            lblResult.Content = subnetBitString;
+            txtResult.Text = subnetBitString;
             if (subnetBitString.Contains("01") || subnetBitString.Contains("0.1") )
             {
                 lblAnswer.Content = "No";
@@ -53,7 +53,7 @@ public partial class SubnetChecker : Window
     {
         bdrColor.BorderBrush = Brushes.Gray;
         lblAnswer.Content = "";
-        lblResult.Content = "";
+        txtResult.Text = "";
     }
 
     private void SubnetChecker_OnClosing(object sender, CancelEventArgs e)

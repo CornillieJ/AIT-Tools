@@ -32,7 +32,7 @@
                     <Button x:Name="btnIPv4Calc" Content="IPv4 calculator" Click="BtnIPv4Calc_OnClick" Background="Coral"/>
                     <Button x:Name="btnIPv4Manual" Content="IPv4 manual calculator" Click="BtnIPv4Manual_OnClick" Background="LightCoral"
                         Width="125" HorizontalAlignment="Right" Margin="0,1,0,0"/>
-                    <Button x:Name="btnCidr" Content="CIDR To Dotted Decimal Converter" Click="BtnCidr_OnClick" Background="Coral"/>
+                    <Button x:Name="btnCidr" Content="CIDR &harr; Dotted Decimal Converter" Click="BtnCidr_OnClick" Background="Coral"/>
                 </StackPanel>
             </Border>
             <Border BorderBrush="#8d99ae" BorderThickness="2" Padding="5">

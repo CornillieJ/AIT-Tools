@@ -12,7 +12,7 @@
                 <Label FontSize="24" HorizontalContentAlignment="Center">Is your subnet valid?</Label>
                 <TextBox x:Name="txtSubnet" Width="200" TextChanged="TxtSubnet_OnTextChanged"/>
                 <Button Width="80" Margin="5" Content="Check!" Click="ButtonBase_OnClick"/>
-                <Label HorizontalContentAlignment="Center" x:Name="lblResult" />
+                <TextBox HorizontalContentAlignment="Center" x:Name="txtResult"/> 
                 <Label x:Name="lblAnswer" HorizontalContentAlignment="Center" FontSize="32"/>
            </StackPanel>
         </Border>
